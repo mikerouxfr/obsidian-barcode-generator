@@ -9,7 +9,7 @@ export default class Barcode extends Plugin {
 
 	async attachBarcodeProcessors() {
 		// Attach simple barcode blocks
-		new SimpleBarcodeProcessor(this).processBarcode(this.settings, this.settings.barcode_name);
+		new SimpleBarcodeProcessor(this).processBarcode();
 
 		// Attach barcode-* blocks
 		for (const [code, _] of Object.entries(BARCODE_TAG_NAME)) {
